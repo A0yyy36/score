@@ -14,18 +14,18 @@ public class SwingApp extends JFrame {
     public SwingApp(String title) {
         // フレームの設定
         super(title);
-        setBounds(100, 100, 400, 200);
+        setBounds(100, 100, 800, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // テキストフィールドの作成
-        textField = new JTextField(20);
+        textField = new JTextField(40);
 
         // ボタンの作成
         saveButton = new JButton("保存");
 
         // パネルにコンポーネントを追加
         JPanel panel = new JPanel();
-        panel.add(new JLabel("テキストを入力してください:"));
+        panel.add(new JLabel("テストした日付を入力してください:"));
         panel.add(textField);
         panel.add(saveButton);
 
@@ -63,7 +63,7 @@ public class SwingApp extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            SwingApp app = new SwingApp("テキスト保存アプリ");
+            SwingApp app = new SwingApp("テスト結果記録アプリ");
             app.setVisible(true);
         });
     }
